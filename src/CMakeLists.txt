@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.0.0)
+set(lib "libtheora")
+project(${lib} VERSION 0.1.0)
+file(GLOB theora_src ${CMAKE_CURRENT_LIST_DIR}/**/*.h ${CMAKE_CURRENT_LIST_DIR}/**/*.cpp ${CMAKE_CURRENT_LIST_DIR}/**/*.c)
+source_group(TREE ${CMAKE_CURRENT_LIST_DIR} FILES ${theora_src})
+add_library(${lib}  ${theora_src})
