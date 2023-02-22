@@ -5,7 +5,8 @@ file(GLOB_RECURSE theora_src ${CMAKE_CURRENT_LIST_DIR}/*.h ${CMAKE_CURRENT_LIST_
 source_group(TREE ${CMAKE_CURRENT_LIST_DIR} FILES ${theora_src})
 add_library(${lib} ${theora_src})
 target_link_libraries(${lib} libogg)
-target_include_directories(${lib} PUBLIC
+target_link_libraries(${lib} libvorbis)
+include_directories(
     ${CMAKE_CURRENT_LIST_DIR}/include/theora
     ${CMAKE_CURRENT_LIST_DIR}/include
     ${CMAKE_CURRENT_LIST_DIR}/lib
